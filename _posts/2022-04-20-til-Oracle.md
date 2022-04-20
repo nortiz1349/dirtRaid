@@ -90,6 +90,7 @@ SELECT *
 ```
 
 ## AND, OR 조건식
+
 ```sql
 // AND: 모든 조건을 만족해야 출력
 SELECT *
@@ -103,13 +104,17 @@ SELECT *
   WHERE DEPTNO = 30
     OR JOB = 'CLERK';
 ```
+
 - 조건식의 개수는 사실상 제한이 없다고 봐도 무방하다.
 - 따옴표 구분 `" "`, `' '`
   - SQL "문자" = 칼럼명 "이름"
   - '문자' = 데이터 '문자'
 
+
+
 ## 대소 비교연산자
-```SQL
+
+```sql
 // 대소 비교연산자를 사용하여 출력
 SELECT *
     FROM EMP
@@ -124,11 +129,13 @@ SELECT *
 ```
 
 ## 등가 비교연산자
+
 - 양쪽 값이 같은지 검사
-`A != B, A <> B, A ^= B`
+- `A != B, A <> B, A ^= B`
 -> `A` 와 `B`의 값이 다를 경우 `TRUE`, 같을 경우 `FALSE`
 -> 모두 동일한 결과 값을 가진다.
 - 논리 부정 연산자 `NOT`과 동일한 출력값을 가진다.
+
 ```sql
 SELECT *
     FROM EMP;
@@ -137,7 +144,10 @@ SELECT *
 ```
 
 ## IN, NOT IN 연산자
+
 - IN 연산자를 사용하면 특정 열에 해당하는 조건을 여러개 지정할 수 있다.
+
+
 ```sql
 // IN - 모두 해당하는 결과값 출력
 SELECT *
@@ -150,8 +160,11 @@ SELECT *
   WHERE JOB NOT IN ('MANAGER', 'SALESMAN', 'CLERK');
 ```
 
+
 ## BETWEEN A AND B 연산자
+
 - 최소, 최대값 사이의 결과값을 출력
+
 ```sql
 SELECT *
     FROM EMP
@@ -160,41 +173,51 @@ SELECT *
 ```
 
 ## LIKE 연산자와 와일드 카드
+
 - LIKE 연산자는 일부 문자열이 포함된 데이터를 조회할 때 사용한다.
-```SQL
+
+```sql
 SELECT *
     FROM EMP
   WHERE ENAME LIKE 'S%';
 // ENAME 열 값이 대문자 S로 시작하는 데이터를 조회함
 ```
+
 ###### 와일드카드
+
 - `_` : 어떤 값이든 상관없이 한 개의 데이터를 의미
 - `%` : 길이와 상관없이(문자 없는 경우도 포함) 모든 문자 데이터를 의미
-```SQL
+
+```sql
 SELECT *
     FROM EMP
   WHERE ENAME LIKE '_L%';
 // 첫번째 문자는 아무거나, 두번째 문자는 L로 시작하는 데이터를 조회함
 ```
-```SQL
+
+```sql
 SELECT *
     FROM EMP
   WHERE ENAME LIKE '%AM%';
 // 사원 이름에 AM이 포함되어 있는 데이터만 출력, NOT LIKE 를 활용할 수도 있음
 ```
+
 ###### ESCAPE절
-```SQL
+
+```sql
 SELECT *
     FROM SOME_TABLE
   WHERE SOME_COLUMN LIKE 'A₩_A%' ESCAPE '₩';
 // ₩ 문자 바로 뒤에 있는 `_`는 와일드카드가 아니라 문자로 인식함
 ```
 
-
 ## IS NULL 연산자
+
 ###### NULL
+
 - 현재 무슨 값인지 확정되지 않은 상태
 - 값 자체가 존재하지 않는 상태
+
 ```SQL
 SELECT *
     FROM EMP;
@@ -204,8 +227,11 @@ SELECT *
 ```
 
 ## 집합연산자
+
 ###### UNION (합집합)
+
 - `SELECT`문으로 조회한 결과를 하나의 집합과 같이 사용할 수 있는 연산자
+
 ```sql
 SELECT EMPNO, ENAME, SAL, DEPTNO
     FROM EMP
@@ -216,10 +242,12 @@ SELECT EMPNO, ENAMEM, SAL, DEPTNO
   WHERE DEPTNO = 20;
 // 10번과 20번 부서에 근무하는 사원 정보를 합쳐서 출력함
 ```
+
 - *열 개수와 열의 자료형이 순서별로 일치해야 함*
 - `UNION ALL` 연산자는 중복데이터도 모두 출력함.
 
 ###### MINUS (차집합)
+
 ```SQL
 SELECT EMPNO, ENAME, SAL, DEPTNO
     FROM EMP
@@ -231,6 +259,7 @@ SELECT EMPNO, ENAME, SAL, DEPTNO
 ```
 
 ###### INTERSECT (합집합))
+
 ```SQL
 SELECT EMPNO, ENAME, SAL, DEPTNO
     FROM EMP
