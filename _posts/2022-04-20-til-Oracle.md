@@ -204,21 +204,18 @@ SELECT *
 
 ###### ESCAPE절
 
-
 ```sql
 SELECT *
     FROM SOME_TABLE
   WHERE SOME_COLUMN LIKE 'A₩_A%' ESCAPE '₩';
 // ₩ 문자 바로 뒤에 있는 `_`는 와일드카드가 아니라 문자로 인식함
 ```
-
-
-<!-- more -->
+***
 
 ## IS NULL 연산자
+## IS NULL
 
 ###### NULL
-
 
 - 현재 무슨 값인지 확정되지 않은 상태
 - 값 자체가 존재하지 않는 상태
