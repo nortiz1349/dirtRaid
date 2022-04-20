@@ -1,12 +1,13 @@
 ---
 title: "Oracle (day2)"
-excerpt: SELECT문의 기본 형식, WHERE절, 연산자
+excerpt: SELECT문의 기본 형식, WHERE, 연산자
 excerpt_separator: "<!--more-->"
 categories:
   - TIL
 tags:
   - oracle
   - database
+  - sql
 
 toc: true
 toc_sticky: true
