@@ -14,6 +14,8 @@ toc_sticky: true
 date: 2022-04-20
 ---
 
+# SELECT문의 기본 형식
+
 ## SELECT, FROM
 ```sql
 -- 테이블 전체 열 조회하기
@@ -31,7 +33,7 @@ SELECT ENAME, 'GOOD MORNING' AS "good morning"
     FROM EMP;
 ```
 
-*연결자를 사용하여 ' ' 표현*
+- 연결자 `||` 를 사용하여 `'` 표현
 
 ```sql
 SELECT ENAME || '''s job is ' || JOB
@@ -70,7 +72,7 @@ SELECT DISTINCT DEPNO
     FROM EMP;
 
 -- 여러 개 열을 명시하여 중복 제거하기
-SELECT DISTICT JOB, DEPTNO
+SELECT DISTINCT JOB, DEPTNO
     FROM EMP;
 
 -- 중복되는 열 제거 없이 그대로 출력
@@ -92,7 +94,8 @@ SELECT ENAME, SAL, SAL*12+COMM AS ANNSAL, COMM
   -- SAL*12+COMM의 별칭을 ANNSAL로 지정함
 ```
 
-## ORDER BY (출력데이터 정렬)
+## ORDER BY
+- 출력데이터 정렬하기
 ```sql
 -- EMP 테이블의 모든 열을 급여 기준으로 오름차순 정렬하기
 SELECT *
@@ -107,6 +110,8 @@ SELECT *
   -- 각각의 열에 내림차순, 오름차순 동시에 사용도 가능하다
   -- ORDER BY 정렬은 자원을 많이 소모하므로 필요한 경우가 아니라면 사용하지 않는 것이 좋음
 ```
+
+# WHERE절과 연산자
 
 ## WHERE
 
@@ -125,7 +130,7 @@ SELECT *
 - 조건이 문자열인 경우 `' '` 를 꼭 붙일 것.
 - 대소문자를 확실하게 구분하여 입력할 것
 
-### AND, OR 조건식
+## AND, OR 조건식
 
 ```sql
 -- AND: 모든 조건을 만족해야 출력
