@@ -39,19 +39,19 @@ SELECT ENAME || '''s job is ' || JOB
 -- 1.STUDENT 테이블에서 모든 학생의 이름과 ID, 체중을 아래와 같이 출력
 -- 컬럼 명은 ID AND WEIGHT
 -- JAME SEO'S ID : 75true, WEIGHT IS 72kg
-SELECT NAME || '''S ID : ' || ID || ', WEIGHT IS ' || WEIGHT || 'KG'
+SELECT NAME || '''S ID : ' || ID || ', WEIGHT IS ' || WEIGHT || 'KG' AS "ID AND WEIGHT"
     FROM STUDENT;
 
 -- 2. EMP 테이블을 조회하여 모든 사람의 이름과 직업을 아래와 같이 출력
 -- 컬럼명은 NAME AND JOB
 -- SMITH(CLERK) , SMITH'CLERK'
-SELECT ENAME || '(' || JOB ||') , ' || ENAME || '''JOB''' 
+SELECT ENAME || '(' || JOB ||') , ' || ENAME || '''JOB''' AS "NAME AND JOB"
     FROM EMP;
 
 -- 3. EMP 테이블을 조회하여 모든 사원의 이름과 급여를 아래와 같이 출력
 -- 컬럼명은 NAME AND SAL
 -- SMITH'S SAL IS $800
-SELECT ENAME || '''S SAL IS $' || SAL
+SELECT ENAME || '''S SAL IS $' || SAL AS "NAME AND SAL"
     FROM EMP;
 ```
 
