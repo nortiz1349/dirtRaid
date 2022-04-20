@@ -1,6 +1,6 @@
 ---
 title: "Github page 테마 수정 - minimal-mistakes"
-excerpt: 폰트크기, 좌우 네비게이션 width, 제목 밑줄 삭제
+excerpt: 폰트크기 수정, 좌우 네비게이션 width 수정, 제목 밑줄 삭제, 폰트 변경
 excerpt_separator: "<!--more-->"
 categories:
   - GitHub
@@ -12,11 +12,13 @@ toc: true
 toc_sticky: true
 date: 2022-04-20
 ---
+
 ## 폰트 사이즈 조정
 
 `_sass/minimal-mistakes/_reset.scss`
 
 위 파일을 찾아 아래 코드를 찾는다.
+
 ```css
 html {
   /* apply a natural box layout model to all elements */
@@ -40,7 +42,8 @@ html {
   -ms-text-size-adjust: 100%;
 }
 ```
-해당 테마는 사용자 환경에 따른 유동적 폰트 크기를 지원하기 위해 `breakpoint` 라는 개념을 사용한다. 모바일에서부터 해상도가 높아질수록 폰트가 커지게 default 값으로 설정되어 있는 듯 하다. 
+
+해당 테마는 사용자 환경에 따른 유동적 폰트 크기를 지원하기 위해 `breakpoint` 라는 개념을 사용한다. 모바일에서부터 해상도가 높아질수록 폰트가 커지게 default 값으로 설정되어 있는 듯 하다.
 
 아래는 현재 페이지의 폰트 사이즈 설정.
 
@@ -49,10 +52,10 @@ html {
   /* apply a natural box layout model to all elements */
   box-sizing: border-box;
   background-color: $background-color;
-  font-size: 14px;
+  font-size: 16px;
 
   @include breakpoint($medium) {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   @include breakpoint($large) {
@@ -80,11 +83,12 @@ html {
    ========================================================================== */
 
 $right-sidebar-width-narrow: 150px !default; // default 200px
-$right-sidebar-width: 250px !default;        // default 300px
-$right-sidebar-width-wide: 300px !default;   // default 400px
+$right-sidebar-width: 250px !default; // default 300px
+$right-sidebar-width-wide: 300px !default; // default 400px
 ```
 
 ## 포스트 제목 밑줄 삭제
+
 `_sass\minimal-mistakes\_reset.scss`
 
 아래 코드 한줄만 추가하면 된다.
@@ -93,7 +97,7 @@ $right-sidebar-width-wide: 300px !default;   // default 400px
 /* links */
 
 a {
-  text-decoration: none;  /* 추가된 코드입니다. */
+  text-decoration: none; /* 추가된 코드입니다. */
 
   &:focus {
     @extend %tab-focus;
@@ -109,3 +113,28 @@ a {
   }
 }
 ```
+
+## 폰트 변경
+
+1. 구글 웹 폰트에서 임포트 하기 (https://fonts.google.com/)
+
+`assets\css\main.scss`
+
+```css
+// 구글 웹 폰트 임포트 - 나눔고딕코딩
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
+```
+
+2. 폰트 적용하기
+
+`_sass\minimal-mistakes\_variables.scss`
+
+```css
+/* system typefaces */
+$serif: Georgia, Times, serif !default;
+$sans-serif: -apple-system, BlinkMacSystemFont, "Nanum Gothic Coding", "Roboto",
+  "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
+$monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+```
+
+`"Nanum Gothic Coding"` 을 추가하였다.
