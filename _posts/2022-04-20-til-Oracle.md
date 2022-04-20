@@ -108,15 +108,21 @@ SELECT *
   -- ORDER BY 정렬은 자원을 많이 소모하므로 필요한 경우가 아니라면 사용하지 않는 것이 좋음
 ```
 
-## WHERE (특정 데이터만 출력)
+## WHERE
+- 원하는 조건만 골라내기
 ```sql
+SELECT [COLUMN OR EXPRESSION]
+    FROM [TABLE OR VIEW]
+  WHERE 원하는 조건;
+
 -- 부서번호가 30인 데이터만 출력
 SELECT *
     FROM EMP
   WHERE DEPTNO = 30;
 ```
+- 조건이 문자열인 경우 `' '` 를 꼭 붙일 것.
 
-## AND, OR 조건식
+### AND, OR 조건식
 
 ```sql
 -- AND: 모든 조건을 만족해야 출력
