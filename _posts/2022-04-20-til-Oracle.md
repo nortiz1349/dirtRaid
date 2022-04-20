@@ -109,7 +109,9 @@ SELECT *
 ```
 
 ## WHERE
+
 - 원하는 조건만 골라내기
+
 ```sql
 SELECT [COLUMN OR EXPRESSION]
     FROM [TABLE OR VIEW]
@@ -121,6 +123,7 @@ SELECT *
   WHERE DEPTNO = 30;
 ```
 - 조건이 문자열인 경우 `' '` 를 꼭 붙일 것.
+- 대소문자를 확실하게 구분하여 입력할 것
 
 ### AND, OR 조건식
 
