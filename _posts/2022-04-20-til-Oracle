@@ -1,5 +1,6 @@
 ---
 title: "Oracle (day2)"
+excerpt: 데이터베이스 수업 2일차
 excerpt_separator: "<!--more-->"
 categories:
   - Blog
@@ -7,6 +8,9 @@ tags:
   - oracle
   - database
   - TIL
+
+toc: true
+date: 2022-04-20
 ---
 
 ## SELECT, FROM
