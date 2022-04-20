@@ -19,7 +19,7 @@ date: 2022-04-20
 
 위 파일을 찾아 아래 코드를 찾는다.
 
-```css
+```scss
 html {
   /* apply a natural box layout model to all elements */
   box-sizing: border-box;
@@ -47,7 +47,7 @@ html {
 
 아래는 현재 페이지의 폰트 사이즈 설정.
 
-```css
+```scss
 html {
   /* apply a natural box layout model to all elements */
   box-sizing: border-box;
@@ -77,7 +77,7 @@ html {
 
 위 파일을 찾아 아래 코드를 수정 해준다. 디폴트 값을 주석으로 달아 놓았다.
 
-```css
+```scss
 /*
    Grid
    ========================================================================== */
@@ -93,7 +93,7 @@ $right-sidebar-width-wide: 300px !default; // default 400px
 
 아래 코드 한줄만 추가하면 된다.
 
-```css
+```scss
 /* links */
 
 a {
@@ -120,7 +120,7 @@ a {
 
 `assets\css\main.scss`
 
-```css
+```scss
 // 구글 웹 폰트 임포트 - 나눔고딕코딩
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
 ```
@@ -129,7 +129,7 @@ a {
 
 `_sass\minimal-mistakes\_variables.scss`
 
-```css
+```scss
 /* system typefaces */
 $serif: Georgia, Times, serif !default;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Nanum Gothic Coding", "Roboto",
