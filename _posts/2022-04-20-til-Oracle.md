@@ -28,31 +28,33 @@ SELECT * FROM TAB;
 -- 표현식(리터럴)을 사용하여 출력하기
 SELECT ENAME, 'GOOD MORNING' AS "good morning"
     FROM EMP;
+```
+
+*연결자를 사용하여 ' ' 표현*
+
+```sql
+SELECT ENAME || '''s job is ' || JOB
+    FROM EMP;
 
 -- 1.STUDENT 테이블에서 모든 학생의 이름과 ID, 체중을 아래와 같이 출력
 -- 컬럼 명은 ID AND WEIGHT
 -- JAME SEO'S ID : 75true, WEIGHT IS 72kg
 SELECT NAME || '''S ID : ' || ID || ', WEIGHT IS ' || WEIGHT || 'KG'
-FROM STUDENT;
+    FROM STUDENT;
 
 -- 2. EMP 테이블을 조회하여 모든 사람의 이름과 직업을 아래와 같이 출력
 -- 컬럼명은 NAME AND JOB
 -- SMITH(CLERK) , SMITH'CLERK'
 SELECT ENAME || '(' || JOB ||') , ' || ENAME || '''JOB''' 
-FROM EMP;
+    FROM EMP;
 
 -- 3. EMP 테이블을 조회하여 모든 사원의 이름과 급여를 아래와 같이 출력
 -- 컬럼명은 NAME AND SAL
 -- SMITH'S SAL IS $800
 SELECT ENAME || '''S SAL IS $' || SAL
-FROM EMP;
-
-```
-*연결자를 사용하여 ' ' 표현*
-```sql
-SELECT ENAME || '''s job is ' || JOB
     FROM EMP;
 ```
+
 ## DESC
 ```sql
 -- 테이블 구조 보기
