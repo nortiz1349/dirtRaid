@@ -212,7 +212,7 @@ SELECT *
 
 ## IS NULL 연산자
 
-###### NULL
+`NULL`
 
 - 현재 무슨 값인지 확정되지 않은 상태
 - 값 자체가 존재하지 않는 상태
@@ -227,7 +227,7 @@ SELECT *
 
 ## 집합연산자
 
-###### UNION (합집합)
+`UNION` (합집합)
 
 - `SELECT`문으로 조회한 결과를 하나의 집합과 같이 사용할 수 있는 연산자
 
@@ -245,7 +245,7 @@ SELECT EMPNO, ENAMEM, SAL, DEPTNO
 - *열 개수와 열의 자료형이 순서별로 일치해야 함*
 - `UNION ALL` 연산자는 중복데이터도 모두 출력함.
 
-###### MINUS (차집합)
+`MINUS` (차집합)
 
 ```sql
 SELECT EMPNO, ENAME, SAL, DEPTNO
@@ -257,7 +257,7 @@ SELECT EMPNO, ENAME, SAL, DEPTNO
 // 10번 부서에 해당하는 사원 데이터는 제외한 결과 값이 출력됨.
 ```
 
-###### INTERSECT (합집합))
+`INTERSECT` (합집합))
 
 ```sql
 SELECT EMPNO, ENAME, SAL, DEPTNO
