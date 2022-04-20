@@ -1,6 +1,6 @@
 ---
-title: "Github page 폰트, 레이아웃"
-excerpt: minimal-mistakes 폰트크기 조절, 좌우 네비게이션 width 조정
+title: "Github page 테마 수정 - minimal-mistakes"
+excerpt: 폰트크기, 좌우 네비게이션 width, 제목 밑줄 삭제
 excerpt_separator: "<!--more-->"
 categories:
   - GitHub
@@ -14,7 +14,7 @@ date: 2022-04-20
 ---
 ## 폰트 사이즈 조정
 
-`/_sass/minimal-mistakes/_reset.scss`
+`_sass/minimal-mistakes/_reset.scss`
 
 위 파일을 찾아 아래 코드를 찾는다.
 ```css
@@ -52,7 +52,7 @@ html {
   font-size: 14px;
 
   @include breakpoint($medium) {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   @include breakpoint($large) {
@@ -65,5 +65,47 @@ html {
 
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+}
+```
+
+## 네이게이션 width 조정
+
+`_sass\minimal-mistakes\_variables.scss`
+
+위 파일을 찾아 아래 코드를 수정 해준다. 디폴트 값을 주석으로 달아 놓았다.
+
+```css
+/*
+   Grid
+   ========================================================================== */
+
+$right-sidebar-width-narrow: 150px !default; // default 200px
+$right-sidebar-width: 250px !default;        // default 300px
+$right-sidebar-width-wide: 300px !default;   // default 400px
+```
+
+## 포스트 제목 밑줄 삭제
+`_sass\minimal-mistakes\_reset.scss`
+
+아래 코드 한줄만 추가하면 된다.
+
+```css
+/* links */
+
+a {
+  text-decoration: none;  /* 추가된 코드입니다. */
+
+  &:focus {
+    @extend %tab-focus;
+  }
+
+  &:visited {
+    color: $link-color-visited;
+  }
+
+  &:hover {
+    color: $link-color-hover;
+    outline: 0;
+  }
 }
 ```
