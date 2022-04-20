@@ -218,7 +218,7 @@ SELECT *
 - 현재 무슨 값인지 확정되지 않은 상태
 - 값 자체가 존재하지 않는 상태
 
-```SQL
+```sql
 SELECT *
     FROM EMP;
   WHERE COMM IS NULL;
@@ -248,7 +248,7 @@ SELECT EMPNO, ENAMEM, SAL, DEPTNO
 
 ###### MINUS (차집합)
 
-```SQL
+```sql
 SELECT EMPNO, ENAME, SAL, DEPTNO
     FROM EMP
 MINUS
@@ -260,7 +260,7 @@ SELECT EMPNO, ENAME, SAL, DEPTNO
 
 ###### INTERSECT (합집합))
 
-```SQL
+```sql
 SELECT EMPNO, ENAME, SAL, DEPTNO
     FROM EMP
 INTERSECT
