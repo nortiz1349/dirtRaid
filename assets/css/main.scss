@@ -6,3 +6,7 @@
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+
+
+// 구글 웹 폰트 임포트 - 나눔고딕코딩
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
