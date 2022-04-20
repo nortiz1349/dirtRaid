@@ -14,9 +14,9 @@ toc_sticky: true
 date: 2022-04-20
 ---
 
-# SELECT문의 기본 형식
+# < SELECT문의 기본 형식 >
 
-## SELECT, FROM
+## 1. SELECT, FROM
 
 ```sql
 -- 테이블 전체 열 조회하기
@@ -59,14 +59,14 @@ SELECT ENAME || '''S SAL IS $' || SAL AS "NAME AND SAL"
     FROM EMP;
 ```
 
-## DESC
+## 2. DESC
 
 ```sql
 -- 테이블 구조 보기
 DESC 테이블명;
 ```
 
-## DISTINCT
+## 3. DISTINCT
 
 ```sql
 -- DISTINCT로 열의 중복 제거하기
@@ -82,7 +82,7 @@ SELECT ALL JOB, DEPTNO
     FROM [TABLE_NAME];
 ```
 
-## 연산식(+,\*), 별칭(alias)
+## 4. 연산식(+,\*), 별칭(alias)
 
 ```sql
 -- 열에 연산식을 사용하여 출력하기
@@ -97,7 +97,7 @@ SELECT ENAME, SAL, SAL*12+COMM AS ANNSAL, COMM
   -- SAL*12+COMM의 별칭을 ANNSAL로 지정함
 ```
 
-## ORDER BY
+## 5. ORDER BY
 
 - 출력데이터 정렬하기
 
@@ -115,10 +115,11 @@ SELECT *
   -- 각각의 열에 내림차순, 오름차순 동시에 사용도 가능하다
   -- ORDER BY 정렬은 자원을 많이 소모하므로 필요한 경우가 아니라면 사용하지 않는 것이 좋음
 ```
+***
 
-# WHERE절과 연산자
+# < WHERE절과 연산자 >
 
-## WHERE
+## 1. WHERE
 
 - 원하는 조건만 골라내기
 
@@ -136,7 +137,7 @@ SELECT *
 - 조건이 문자열인 경우 `' '` 를 꼭 붙일 것.
 - 대소문자를 확실하게 구분하여 입력할 것
 
-## AND, OR 조건식
+## 2. AND, OR 조건식
 
 ```sql
 -- AND: 모든 조건을 만족해야 출력
@@ -157,7 +158,7 @@ SELECT *
   - SQL "문자" = 칼럼명 "이름"
   - '문자' = 데이터 '문자'
 
-## 대소 비교연산자
+## 3. 대소 비교연산자
 
 ```sql
 -- 대소 비교연산자를 사용하여 출력
@@ -173,7 +174,7 @@ SELECT *
 -- 알파벳 순서로 '대소'를 비교함
 ```
 
-## 등가 비교연산자
+## 4. 등가 비교연산자
 
 - 양쪽 값이 같은지 검사
 - `A != B, A <> B, A ^= B`
@@ -188,7 +189,7 @@ SELECT *
 -- 열 값이 3000인 행은 출력에서 제외됨
 ```
 
-## IN, NOT IN
+## 5. IN, NOT IN
 
 - IN 연산자를 사용하면 특정 열에 해당하는 조건을 여러개 지정할 수 있다.
 
@@ -204,7 +205,7 @@ SELECT *
   WHERE JOB NOT IN ('MANAGER', 'SALESMAN', 'CLERK');
 ```
 
-## BETWEEN A AND B
+## 6. BETWEEN A AND B
 
 - 최소, 최대값 사이의 결과값을 출력
 
@@ -215,7 +216,7 @@ SELECT *
 -- NOT BETWEEN으로 해당 구간을 제외할 수도 있다
 ```
 
-## LIKE 연산자와 와일드 카드
+## 7. LIKE 연산자와 와일드 카드
 
 - LIKE 연산자는 일부 문자열이 포함된 데이터를 조회할 때 사용한다.
 
@@ -254,7 +255,7 @@ SELECT *
 -- ₩ 문자 바로 뒤에 있는 `_`는 와일드카드가 아니라 문자로 인식함
 ```
 
-## IS NULL
+## 8. IS NULL
 
 `NULL`
 
@@ -269,7 +270,7 @@ SELECT *
 -- IS NOT NULL 활용 가능
 ```
 
-## 집합연산자
+## 9. 집합연산자
 
 `UNION` (합집합)
 
