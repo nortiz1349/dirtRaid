@@ -45,3 +45,41 @@ date: 2022-04-20
 2. `Project Name` 입력
 3. `Location` > 본인이 생성했던 워크스페이스가 맞는지 확인한다.
 4. `Java SE 11.0.14` 수업에 사용할 JRE 환경 확인.
+
+## 6. Package, Class 생성
+
+- `Package`: 다양한 자바 파일들을 관리하기 위한 폴더라고 생각하면 된다.
+
+1. `src` 폴더 > `New` > `Package`
+2. 해당 패키지 폴더에 `Class` 생성
+
+   - 클래스 이름은 대문자로 시작한다.
+   - 변수, 매서드 이름은 소문자로 시작, 단어가 이어지는 부분은 대문자
+   - `public static void main(String[] args)` 당분간 체크할 것
+
+3. 아래 코드 작성
+
+```java
+package ga.nortizbitc.exs;
+
+public class Ex1_220421 {
+
+ public static void main(String[] args) {
+  System.out.println("안녕 자바야!");
+  // 실행은 ctrl+f11, 맥은 fn+cmd+f11
+ }
+
+}
+```
+
+## 7. 자동완성 활성화
+
+1. `Search` > `Content Assist - JAVA/Editor`
+2. `Auto Activation trigger for JAVA` 에 아래 문자열 입력
+3. `<=$:{.@qwertyuioplkjhgfdsazxcvbnm_QWERTYUIOPLKJHGFDSAZXCVBNM`
+
+## 8. 단축키
+
+- 인라인 주석: `cmd` + `/`
+- 블록 주석: `fn` + `cmd` + `/`
+- Javadoc 보기: `shift` + `fn` + `f2`
