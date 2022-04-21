@@ -80,6 +80,8 @@ public class Ex1_220421 {
 
 ## 8. 단축키
 
-- 인라인 주석: `cmd` + `/`
-- 블록 주석: `fn` + `cmd` + `/`
-- Javadoc 보기: `shift` + `fn` + `f2`
+- 인라인 주석 : `cmd` + `/`
+- 블록 주석 : `fn` + `cmd` + `/`
+- Javadoc 보기 : `shift` + `fn` + `f2`
+- 실행 : `fn` + `cmd` + `f11`
+- 코드 입력창 확장 : `ctrl` + `m`
