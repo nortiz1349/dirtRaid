@@ -1,107 +1,228 @@
 ---
-title: "JAVA 개발환경 준비"
-excerpt: JDK 설치, JAVA 환경변수 설정, Eclipse
+title: "JAVA - 시작, 변수와 자료형, 여러가지 연산자"
+excerpt: 변수, 자료형, 연산자
 excerpt_separator: "<!--more-->"
 categories:
   - TIL
 tags:
   - java
   - eclipse
-  - 초기설정
+  - Do it!
+  - 변수
+  - 자료형
+  - 연산자
 
 toc: true
 toc_sticky: true
-date: 2022-04-20
+date: 2022-04-21
 ---
 
+## 1. 자바 프로그래밍 시작하기
 
-## 1. JDK 설치
+### 자바 특징
 
-  수업에 사용하는 버전은 `jdk-11.0.2`
+1. 플랫폼에 영향을 받지 않으므로 다양한 환경에서 사용할 수 있다.
+2. 객체 지향 언어이기 때문에 유지보수가 쉽고 확장성이 좋다.
+3. 프로그램이 안정적이다.
+4. 오픈 소스이다.
 
-## 2. JAVA 환경변수 설정
+### 자바로 할 수 있는 일?
 
-자바가 설치된 디렉토리로 이동 하지 않고도 전역적으로 터미널이나 커맨드창에서 컴파일이 가능해진다. 그리고 라이브러리 관리 시스템인 MAVEN에서 JAVA_HOME 환경변수를 찾는 경우가 있다고 한다. 내 맥북에서는 별도로 설정을 하지 않았는데도 터미널에서 문제 없이 실행 되었다. 윈도우인 경우 아래와 같이 설정하면 된다.
+1. 웹서버(우리가 할 것)
+2. 안드로이드앱
+3. 게임(마인크래프트)
 
-1. `고급 시스템 설정` > `환경변수` > `시스템변수` > `새로만들기`
-2. 변수이름 : `JAVA_HOME`, 변수값 : `C:\Program Files\Java\jdk-11.0.2` (자바가 설치된 경로)
-3. 시스템 변수 `Path` 편집 > `%JAVA_HOME%\bin` 추가
-4. 변수이름: `CLASSPATH`, 변수값: `%JAVA_HOME%\lib;.;`
-5. `cmd` > `java -version` 으로 설치확인
+---
 
-## 3. Eclipse 설치 후 실행
+## 2. 변수와 자료형
 
-개인별 워크스페이스를 만들고 강사님이 배포한 수업자료를 `import` 하여 불러 들인다.
+### 1) 변수
 
-`import` > `General` > `Projects from Folder...`
+자바스크립트에서는 변수를 선언하고 무엇을 담을지에 대해서는 정하지 않았지만, 자바에서는 변수를 선언 할 때 자료형이 무엇인지 명시한다.
 
-## 4. Eclipse Perspective 추가
+- 변수 선언하고 값 대입하기
 
-우측 상단 아이콘(Open Perspective)에서 `java`, `debug` 추가한다.
+  ```java
+  package chapter2;
 
-## 5. 자바 프로젝트 생성
+  public class Variable1 {
 
-1. `Package Explorer` > `New` > `Java Project`
-2. `Project Name` 입력
-3. `Location` > 본인이 생성했던 워크스페이스가 맞는지 확인한다.
-4. `Java SE 11.0.14` 수업에 사용할 JRE 환경 확인.
+  public static void main(String[] args) {
+    int level; // 정수형 변수 level을 선언
+    level = 10; // 값 10을 level 변수에 대입
+    System.out.println(level); // level 값 출력
+  }
 
-## 6. Package, Class 생성
+  }
+  // 선언함과 동시에 대입 가능
+  // int level = 10;
+  ```
 
-- `Package`: 다양한 자바 파일들을 관리하기 위한 폴더라고 생각하면 된다.
+변수 이름에 예약어는 사용할 수 없다. 영문자나 숫자를 사용할 수 있지만 숫자로 시작할 수는 없다. 특수문자는 `$`, `_` 만 사용 가능하다.
 
-1. `src` 폴더 > `New` > `Package`
-2. 해당 패키지 폴더에 `Class` 생성
+### 2) 정수 자료형
 
-   - 클래스 이름은 대문자로 시작한다.
-   - 변수, 매서드 이름은 소문자로 시작, 단어가 이어지는 부분은 대문자
-   - `public static void main(String[] args)` 당분간 체크할 것
+`byte` < `short` < `int` < `long`
 
-3. 아래 코드 작성
+### 3) 문자 자료형
 
-```java
-package ga.nortizbitc.exs;
+`char`
 
-public class Ex1_220421 {
+  ```java
+  package chapter2;
 
- public static void main(String[] args) {
-  System.out.println("안녕 자바야!");
-  // 실행은 ctrl+f11, 맥은 fn+cmd+f11
- }
+  public class CharacterEx1 {
 
-}
-```
+  public static void main(String[] args) {
+    char ch1 = 'A';
+    System.out.println(ch1);  // 문자출력
+    System.out.println((int)ch1); // 문자에 해당하는 정수 값(아스키코드) 출력
+    
+    char ch2 = 66;     // 정수 값 대입
+    System.out.println(ch2);  // 정수 값에 해당하는 문자 출력
+    
+    int ch3 = 67;
+    System.out.println(ch3);  // 문자 정수 값 출력
+    System.out.println((char)ch3); // 정수 값에 해당하는 문자 출력
+  }
 
-## 7. 자동완성 활성화
+  }
+  ```
 
-1. `Search` > `Content Assist - JAVA/Editor`
-2. `Auto Activation trigger for JAVA` 에 아래 문자열 입력
-3. `<=$:{.@qwertyuioplkjhgfdsazxcvbnm_QWERTYUIOPLKJHGFDSAZXCVBNM`
+### 4) 실수 자료형
 
-## 8. 단축키
+`float` < `double`
 
-- 인라인 주석 : `cmd` + `/`
-- 블록 주석 : `fn` + `cmd` + `/`
-- Javadoc 보기 : `shift` + `fn` + `f2`
-- 실행 : `fn` + `cmd` + `f11`
-- 코드 입력창 확장 : `ctrl` + `m`
+아주 정밀한 계산이 필요한 경우에 주로 사용한다. `double`이 기본형.
 
-## 9. 이클립스 디버깅
+### 5) 논리 자료형
 
-1. 소스 코드 창의 라인 번호를 더블 클릭하여 `중단점(break point)` 시작 부분과 끝나는 부분 2개를 설정한다.
-2. 이클립스 오른쪽 상단의 `debug` 모드로 전환. 소스의 특정 부분을 검사하거나, 메모리 구조를 보는데 사용한다.
-3. debug 실행
-4. 처음 설정한 시작 지점이 하이라이트 되어 있다.
-  
-- `Step into` > 매서드, 반복문, 특정 부분에 들어갈 때 사용
-- `Step over` > 다음 단계로 진행
+`boolean`
 
-## 10. 맥북 이클립스 한글 깨짐
+### 6) 자료형 없이 변수 선언
 
-윈도우에서 작업한 파일을 맥북에서 importing 하니 한글로 작성한 주석 부분이 깨지는 현상 발생. 윈도우 이클립스 기본 인코딩 설정인 `MS949` 로 수정하면 정상적으로 한글이 표시 된다.
+`var`
 
-1. `Preference` > `General` > `Workspace`
+자바10부터 생긴 문법, 자바 수업에서는 사용하지 않을 예정.
 
-2. `Text file encoding` > `Other`
+### 7) 상수와 리터럴
 
-3. `MS949` 입력
+#### 상수 선언
+
+`final`
+
+프로그램 내부에서 반복적으로 사용하고, 변하지 않아야 하는 값을 상수로 선언하여 사용한다.
+
+  ```java
+  final double PI = 3.14;
+  final int MAX_NUM = 100;
+  ```
+
+상수 이름은 `대문자`를 사용하고 연결기호 `_` 를 활용한다.
+
+#### 리터럴
+
+프로그램에서 사용하는 모든 숫자, 문자, 논리값을 일컫는 말. 간단히 말해서 변수에 대입 하기전의 값. 프로그램이 시작할 때 시스템에 같이 로딩되어 특정 메모리 공간인 상수 풀에 놓인다.
+
+### 8) 형 변환
+
+정수와 실수는 컴퓨터 내부에서 표현되는 방식이 전혀 다르다. 따라서 두가지 형의 연산을 그대로 수행할 수 없고 형변환이 이루어진 뒤 연산이 진행된다.
+
+#### 묵시적 형 변환 (자동 형 변환)
+
+1. 바이트 크기가 작은 자료형에서 큰 자료형으로 대입하는 경우
+2. 덜 정밀한 자료형에서 더 정밀한 자료형으로 대입하는 경우
+3. 연산중에 자동 변환되는 경우
+
+#### 명시적 형 변환 (강제 형 변환)
+
+자동 형 변환의 반대의 경우로 생각하면 된다. 큰 자료형에서 작은 자료형으로 대입하면 값이 손실될 수 있는 위험이 있으므로 명시적으로 형 변환을 한다.
+
+  ```java
+  int iNum = 1000;
+  byte bNum = (byte)iNum; // 강제로 형을 바꾸려면 바꿀 형을 괄호를 써서 명시해야 함
+  ```
+
+위의 경우 `1000`을 `1 byte` 안에 표현할 수 없으므로 자료 손실이 발생한다.
+
+---
+
+## 3. 자바의 여러 가지 연산자
+
+### 1) 기본 연산자
+
+#### 항과 연산자
+
+- 연산자 우선순위 : `단항 연산자` > `이항 연산자` > `삼항 연산자`
+
+1. 대입 연산자  
+`=`
+
+2. 부호 연산자  
+`+`, `-`
+
+3. 산술 연산자  
+`+`, `-`, `*`, `/`, `%`
+
+4. 증가, 감소 연산자  
+`++`, `--`  
+
+5. 관계 연산자  
+`>`, `<`, `>=`, `<=`, `==`, `!=`
+
+6. 논리 연산자  
+  `&&` : 둘다 참이면 참, 아니면 모두 거짓  
+  `||` : 둘 중 하나만 참이면 참, 둘 다 거짓이면 거짓  
+  `!` : 참이면 거짓으로, 거짓이면 참으로  
+
+    ```java
+    // 단락 회로 평가
+    package operator;
+
+    public class OperationEx3 {
+
+    public static void main(String[] args) {
+
+      int num1 = 10;
+      int i = 2;
+      
+      boolean value = ((num1 = num1 + 10 ) < 10) && ( ( i = i + 2 ) < 10);
+      // && 앞의 결과 값이 거짓이므로 뒤의 문장은 실행되지 않음
+      System.out.println(value);
+      System.out.println(num1);
+      System.out.println(i);
+      
+      value = ((num1 = num1 + 10 ) > 10) || ( ( i = i + 2 ) < 10);
+      // || 앞의 결과 값이 참이므로 뒤의 문장은 실행되지 않음
+      System.out.println(value);
+      System.out.println(num1);
+      System.out.println(i);
+    }
+
+    }
+    ```
+
+7. 복합 대입 연산자  
+`+=`, `-=`, `*=`, `/=`, `%=`
+
+8. 조건 연산자
+
+    ```java
+    int num = (5 > 3) ? 10 : 20;
+    // 조건식 ? 결과1 : 결과2;
+    // 조건식이 참이면 결과1, 거짓이면 결과2
+    ```
+
+### 2) 비트 연산자
+
+'암호화' 작업처럼 임의의 숫자를 만들거나, 어떤 변수의 특정 비트를 꺼내보는(마스킹) 경우에 사용. 혹은 임베디드에서 연산속도를 높이기 위해, 프로그램에서 특정 값을 만들거나 연산할 때 사용한다.
+
+1. 비트 논리 연산자  
+`&`, `|`, `^`, `~`
+
+2. 비트 이동 연산자  
+`<<`, `>>`, `>>>`
+
+### 3) 연산자 우선 순위
+
+가독성을 위해 소괄호를 활용해서 우선 순위를 지정하는 것을 추천하며, 필요한 경우 우선 순위를 찾아서 활용하면 된다.
