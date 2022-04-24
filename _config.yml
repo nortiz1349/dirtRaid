@@ -57,7 +57,7 @@ plugins:
 
 author:
   name   : "Jongwoon Park"
-  avatar : "/assets/images/bio-photo.JPG"
+  avatar : "/assets/images/bio-photo2.JPG"
   bio    : " 자전거 타는 개발자 지망생입니다."
   links:
     - label: "Website"
