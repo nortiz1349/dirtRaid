@@ -7,7 +7,6 @@ categories:
 tags:
   - java
   - eclipse
-  - 초기설정
 
 toc: true
 toc_sticky: true

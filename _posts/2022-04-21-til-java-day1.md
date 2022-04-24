@@ -8,9 +8,6 @@ tags:
   - java
   - eclipse
   - Do it!
-  - 변수
-  - 자료형
-  - 연산자
 
 toc: true
 toc_sticky: true
