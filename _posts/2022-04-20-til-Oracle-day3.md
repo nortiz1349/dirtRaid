@@ -24,69 +24,69 @@ date: 2022-04-25
 `LOWER(문자열)` : 괄호 안 문자 데이터를 모두 소문자로 변환하여 반환  
 `INTCAP(문자열)` : 첫 글자는 대문자, 나머지는 소문자로 변환  
 
-  ```sql
-  --- 사원 이름에 SCOTT 단어를 포함한 데이터 찾기
-  SELECT *
-    FROM EMP
-  WHERE UPPER(ENAME) LIKE UPPER('%scott%');
+```sql
+--- 사원 이름에 SCOTT 단어를 포함한 데이터 찾기
+SELECT *
+  FROM EMP
+WHERE UPPER(ENAME) LIKE UPPER('%scott%');
 ```
 
 `LENGTH(문자열)` : 문자열의 길이를 반환  
 `LENGTHB(문자열)` : 문자열의 바이트 수를 반환
 
-  ```sql
-  --- 사원 이름의 길이가 5 이상인 행 출력하기
-  SELECT ENAME, LENGTH(ENAME)
-    FROM EMP
-  WHERE LENGTH(ENAME) >= 5;
-  ```
+```sql
+--- 사원 이름의 길이가 5 이상인 행 출력하기
+SELECT ENAME, LENGTH(ENAME)
+  FROM EMP
+WHERE LENGTH(ENAME) >= 5;
+```
 
-`SUBSTR(문자열, 시작위치, 추출길이)`  
+`SUBSTR(문자열, 시작 위치, 추출 길이)`
 
 : 문자열 데이터의 시작 위치부터 추출 길이만큼 추출.  
 : 시작위치가 `음수`일 경우 문자열 마지막에서 거슬러 올라간 위치에서 시작.  
 : 추출 길이를 지정하지 않을 경우 문자열 데이터 끝까지 추출.
 
-  ```sql
-  SELECT JOB,
-    SUBSTR(JOB, -LENGTH(JOB)),    -- 문자열 처음부터 끝까지 출력
-    SUBSTR(JOB, -LENGTH(JOB), 2), -- 문자열 처음부터 2자리 출력
-    SUBSTR(JOB, -3)               -- 문자열 뒤에서 3자리부터 끝까지 출력
-  FROM EMP;
-  ```
+```sql
+SELECT JOB,
+  SUBSTR(JOB, -LENGTH(JOB)),    -- 문자열 처음부터 끝까지 출력
+  SUBSTR(JOB, -LENGTH(JOB), 2), -- 문자열 처음부터 2자리 출력
+  SUBSTR(JOB, -3)               -- 문자열 뒤에서 3자리부터 끝까지 출력
+FROM EMP;
+```
 
 `INSTR(문자열, 찾는 문자열, 시작위치, 몇번째 문자인지)`  
 
 : 특정 문자나 문자열이 어디에 포함되어 있는지 찾을 때  
 
-  ```sql
-  SELECT INSTR('HELLO, ORACLE!', 'L')       -- 3
-        INSTR('HELLO, ORACLE!', 'L', 5)    -- 12
-        INSTR('HELLO, ORACLE!', 'L', 2, 2) -- 4
-    FROM DUAL;
-  ```
+```sql
+SELECT INSTR('HELLO, ORACLE!', 'L')       -- 3
+      INSTR('HELLO, ORACLE!', 'L', 5)    -- 12
+      INSTR('HELLO, ORACLE!', 'L', 2, 2) -- 4
+  FROM DUAL;
+```
 
 `REPLACE(문자열, 찾는 문자, 대체할 문자)`  
 
 : 특정 문자를 다른 문자로 대체할 경우
 
-  ```sql
-  SELECT '010-1234-5678'
-      REPLACE('010-1234-5678', '-', ' ')  -- 010 1234 5678
-      REPLACE('010-1234-5678', '-')       -- 01012345678
-    FROM DUAL;
-  ```
+```sql
+SELECT '010-1234-5678'
+    REPLACE('010-1234-5678', '-', ' ')  -- 010 1234 5678
+    REPLACE('010-1234-5678', '-')       -- 01012345678
+  FROM DUAL;
+```
 
 `LPAD(문자열, 자릿수, 채울 문자)` `RPAD(문자열, 자릿수, 채울 문자)`  
 
 : 데이터의 빈 공간을 특정 문자로 채우는 경우  
 
-  ```sql
-  SELECT
-      RPAD('971225-', 14, '*')    -- 971225-*******
-      RPAD('010-1234-', 13, '*')  -- 010-1234-****
-    FROM DUAL;
-  ```
+```sql
+SELECT
+    RPAD('971225-', 14, '*')    -- 971225-*******
+    RPAD('010-1234-', 13, '*')  -- 010-1234-****
+  FROM DUAL;
+```
 
 `CONCAT(문자열, 문자열)`  
 
@@ -113,12 +113,12 @@ date: 2022-04-25
 
 : 데이터베이스의 현재 날짜와 시간을 보여준다.
 
-  ```sql
-  SELECT SYSDATE AS NOW,
-        SYSDATE-1 AS YESTERDAY,
-        SYSDATE+1 AS TOMORROW
-    FORM DUAL;
-  ```
+```sql
+SELECT SYSDATE AS NOW,
+      SYSDATE-1 AS YESTERDAY,
+      SYSDATE+1 AS TOMORROW
+  FORM DUAL;
+```
 
 `ADD_MONTHS([날짜 데이터], [더할 개월 수(정수)])`
 
@@ -142,10 +142,10 @@ date: 2022-04-25
 
 : 숫자,날짜 > 문자 데이터로 변환
 
-  ```sql
-  SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS 현재날짜시간
-    FROM DUAL;
-  ```
+```sql
+SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS 현재날짜시간
+  FROM DUAL;
+```
 
 - 다양한 형식을 지정하여 출력할 수 있다.
 
