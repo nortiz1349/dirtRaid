@@ -39,7 +39,7 @@ date: 2022-04-25
   SELECT ENAME, LENGTH(ENAME)
     FROM EMP
   WHERE LENGTH(ENAME) >= 5;
-```
+  ```
 
 `SUBSTR(문자열, 시작위치, 추출길이)`  
 
@@ -134,4 +134,28 @@ date: 2022-04-25
 
 - 날짜에도 반올림, 버림 `ROUND`, `TRUNC` 함수 사용이 가능하다.
 
+- 날짜 기준 포맷 종류가 많은데, 필요할 때 검색해서 사용.
+
 ### 4. 형 변환 함수
+
+`TO_CHAR([날짜 데이터], 문자 형태)`
+
+: 숫자,날짜 > 문자 데이터로 변환
+
+  ```sql
+  SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS 현재날짜시간
+    FROM DUAL;
+  ```
+
+- 다양한 형식을 지정하여 출력할 수 있다.
+
+`TO_NUMBER`
+
+: 문자 > 숫자 데이터로 변환
+
+`TO_DATE`
+
+: 문자 > 날짜 데이터로 변환
+
+### 5. NULL 처리 함수
+
