@@ -144,3 +144,53 @@ SELECT TO_CHAR(SYSDATE, 'YYYY/MM/DD HH24:MI:SS') AS 현재날짜시간
 문자 > 날짜 데이터로 변환
 
 ### 5. NULL 처리 함수
+
+데이터가 NULL이면 산술 연산자나 비교 연산자가 동작하지 않는다. 연산 수행을 위해 NULL 값을 다른 값으로 대체 할 때 사용한다.
+
+- `NVL([문자열],[대체할 값])`  
+문자열이 NULL이면 지정한 값으로 변환, NULL이 아니면 그대로 반환.
+
+- `NVL2([문자열], [NULL이 아닌 경우 값], [NULL인 경우 값])`  
+NULL이 아닌 경우에 특정한 값을 지정할 수 있다.
+
+### 6. DECODE, CASE
+
+if 조건문 또는 switch-case 조건문과 유사하다.
+
+```sql
+DECODE ([검사대상],
+        [조건1], [조건1과 일치할 때 반환할 값],
+        [조건2], [조건2와 일치할 때 반환할 값],
+        ...
+        [위 조건과 일치하는 경우가 없을때 반환할 값])
+
+-- 예제
+SELECT EMPNO, ENAME, JOB, SAL,
+       DECODE(JOB,
+            'MANAGER' , SAL*1.1,
+            'SALESMAN', SAL*1.05,
+            'ANALYST' , SAL,
+              SAL*1.03) AS UPSAL
+    FROM EMP;
+```
+
+- 조건이 일치하지 않을 경우의 값이 없을 경우 NULL이 반환된다.
+
+```sql
+CASE ([검사대상],
+    WHEN [조건1] THEN [조건1 true일때 반환할 값]
+    WHEN [조건2] THEN [조건2 true일때 반환할 값]
+    ...
+    ELSE [위 조건과 일치하는 경우가 없을 때 반환할 값])
+
+SELECT EMPNO, ENAME, JOB, SAL,
+    CASE JOB
+        WHEN 'MANAGER' THEN SAL*1.1
+        WHEN 'SALESMAN' THEN SAL*1.05
+        WHEN 'ANALYST' THEN SAL
+        ELSE SAL*1.03
+    END AS UPSAL
+  FROM EMP;
+```
+
+- CASE문은 각 조건식의 true, false 여부만 검사하므로 기준 데이터가 없어도 사용 가능하다.
