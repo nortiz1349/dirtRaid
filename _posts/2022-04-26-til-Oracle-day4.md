@@ -118,14 +118,54 @@ GROUP BY GROUPING SETS(DEPTNO, JOB)
 ORDER BY DEPTNO, JOB;
 ```
 
-- `GROUPING 함수`
+- `GROUPING 함수`  
+ROLLUP 또는 CUBE 함수를 사용한 GROUP BY 절에 그룹화 대상으로 지정한 열이 그룹화된 상태로 결과가 집계되었는지 확인하는데 사용.
 
 ```sql
 SELECT DECODE(GROUPING(DEPTNO), 1, 'ALL_DEPT', DEPTNO) AS DEPTNO,
-DECODE(GROUPING(JOB), 1, 'ALL_JON', JOB) AS JOB,
+DECODE(GROUPING(JOB), 1, 'ALL_JOB', JOB) AS JOB,
 COUNT(*), MAX(SAL), SUM(SAL), AVG(SAL)
 FROM EMP
 GROUP BY CUBE(DEPTNO, JOB)
 ORDER BY DEPTNO, JOB;
 ```
 
+- `GROUPING_ID`  
+여러 열에 대한 그룹화 여부를 확인하는데 사용.
+
+- `LISTAGG`  
+그룹화 데이터를 하나의 열에 가로로 나열하여 출력.
+
+```sql
+SELECT [COLUMN1, 2, ...]
+  LISTAGG([COLUMN_NAME], 구분자)
+  WITHIN GROUP(ORDER BY [기준]])
+FROM
+WHERE
+
+-- 부사별 사원 이름을 나란히 나열하여 출력
+SELECT DEPTNO,
+    LISTAGG(ENAME, ', ')
+    WITHIN GROUP(ORDER BY SAL DESC) AS ENAMES
+  FROM EMP
+GROUP BY DEPTNO;
+```
+
+- `PIVOT` : 행을 열로 바꾸어서 표현  
+`UNPIVOT` : 열을 행으로 바꾸어서 표현
+
+```sql
+SELECT
+FROM
+  PIVOT ([실제 출력할 데이터의 열]
+        FOR [가로줄로 표기할 열] IN ([가로줄 열의 데이터 값])
+        )
+
+SELECT *
+    FROM(SELECT JOB, DEPTNO, SAL
+        FROM EMP)
+  PIVOT(MAX(SAL)
+       FOR DEPTNO IN (10, 20, 30)
+       )
+ORDER BY JOB;
+```
