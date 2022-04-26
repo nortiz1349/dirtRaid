@@ -194,3 +194,47 @@ SELECT EMPNO, ENAME, JOB, SAL,
 ```
 
 - CASE문은 각 조건식의 true, false 여부만 검사하므로 기준 데이터가 없어도 사용 가능하다.
+
+## 연습문제
+
+```sql
+-- Q1
+SELECT EMPNO,
+      RPAD(SUBSTR(EMPNO,1,2), 4, '*') AS MASKING_EMPNO,
+      ENAME,
+      RPAD(SUBSTR(ENAME,1,1), 5, '*') AS MASKING_ENAME
+    FROM EMP
+  WHERE LENGTH(ENAME) = 5;
+```
+
+```sql
+-- Q2
+SELECT EMPNO, ENAME, SAL,
+    TRUNC(SAL / 21.5, 2) AS DAY_PAY,
+    ROUND(SAL / 21.5 / 8, 1) AS TIME_PAY
+  FROM EMP;
+```
+
+```sql
+-- Q3
+SELECT EMPNO, ENAME,
+      TO_CHAR(HIREDATE, 'YYYY/MM/DD') AS HIREDATE,
+      TO_CHAR(NEXT_DAY(ADD_MONTHS(HIREDATE, 3), '������'), 'YYYY/MM/DD') AS R_JOB,
+      NVL(TO_CHAR(COMM), 'N/A') AS COMM
+  FROM EMP;
+```
+
+```sql
+-- Q4
+SELECT EMPNO, ENAME,
+    NVL(TO_CHAR(MGR), ' ') AS MGR,
+    CASE NVL(SUBSTR(MGR,1,2), ' ')
+        WHEN ' ' THEN '0000'
+        WHEN '75' THEN '5555'
+        WHEN '76' THEN '6666'
+        WHEN '77' THEN '7777'
+        WHEN '78' THEN '8888'
+        ELSE TO_CHAR(MGR)
+    END AS CHG_MGR
+  FROM EMP;
+```
