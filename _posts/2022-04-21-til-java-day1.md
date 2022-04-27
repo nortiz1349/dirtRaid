@@ -172,7 +172,6 @@ date: 2022-04-21
   `||` : `논리 합` : 둘 중 하나만 참이면 참, 둘 다 거짓이면 거짓  
   `!` : `부정` : 참이면 거짓으로, 거짓이면 참으로  
 
-
 7. 복합 대입 연산자  
 `+=`, `-=`, `*=`, `/=`, `%=`
 
@@ -206,32 +205,33 @@ date: 2022-04-21
 // 산술 연산자를 사용하여 총점과 평균 구하기
 package operator;
 public class OperationEx1 {
-	public static void main(String[] args) {
-		int mathScore = 90;
-		int engScore = 70;
-		int korScore = 100;
-		
-		int totalScore = mathScore + engScore + korScore;
-		System.out.println(totalScore);
-		
-		double avgScore = totalScore / 2.0;
-		System.out.println(avgScore);
-	}
+ public static void main(String[] args) {
+  int mathScore = 90;
+  int engScore = 70;
+  int korScore = 100;
+  
+  int totalScore = mathScore + engScore + korScore;
+  System.out.println(totalScore);
+  
+  double avgScore = totalScore / 2.0;
+  System.out.println(avgScore);
+ }
 }
 ```
+
 ```java
 // 증가,감소 연산자를 사용하여 값 연산하기
 package operator;
 public class OperationEx2 {
-	public static void main(String[] args) {
-		int gameScore = 150;
-		
-		int lastScore1 = gameScore++;
-		System.out.println(lastScore1);	// 150
-		
-		int lastScore2 = gameScore--;
-		System.out.println(lastScore2);	// 151
-	}
+ public static void main(String[] args) {
+  int gameScore = 150;
+  
+  int lastScore1 = gameScore++;
+  System.out.println(lastScore1); // 150
+  
+  int lastScore2 = gameScore--;
+  System.out.println(lastScore2); // 151
+ }
 }
 ```
 
@@ -239,20 +239,20 @@ public class OperationEx2 {
 // 단락 회로 평가
 package operator;
 public class OperationEx3 {
-	public static void main(String[] args) {
-		int num1 = 10;
-		int i = 2;
-		
-		boolean value = ((num1 = num1 + 10) < 10) && ((i = i + 2) < 10);
-		System.out.println(value);	// false
-		System.out.println(num1);	// 20
-		System.out.println(i);		// 2
-		
-		value = ((num1 = num1 + 10) > 10) || ((i = i + 2) < 10);
-		System.out.println(value);	// true
-		System.out.println(num1);	// 30
-		System.out.println(i);		// 2
-	}
+ public static void main(String[] args) {
+  int num1 = 10;
+  int i = 2;
+  
+  boolean value = ((num1 = num1 + 10) < 10) && ((i = i + 2) < 10);
+  System.out.println(value); // false
+  System.out.println(num1); // 20
+  System.out.println(i);  // 2
+  
+  value = ((num1 = num1 + 10) > 10) || ((i = i + 2) < 10);
+  System.out.println(value); // true
+  System.out.println(num1); // 30
+  System.out.println(i);  // 2
+ }
 }
 ```
 
@@ -260,21 +260,21 @@ public class OperationEx3 {
 // 조건 연산자를 사용하여 부모님의 나이 비교하기
 package operator;
 public class OperationEx4 {
-	public static void main(String[] args) {
-		int fatherAge = 45;
-		int motherAge = 47;
-		
-		char ch;
-		ch = (fatherAge > motherAge) ? 'T' : 'F';
-		
-		System.out.println(ch);
-		
-		// num이 짝수면 true, 홀수면 false
-		int num = 10;
-		boolean isEven;
-		isEven =  (num % 2) == 0 ? true : false;
-		System.out.println(isEven);
-	}
+ public static void main(String[] args) {
+  int fatherAge = 45;
+  int motherAge = 47;
+  
+  char ch;
+  ch = (fatherAge > motherAge) ? 'T' : 'F';
+  
+  System.out.println(ch);
+  
+  // num이 짝수면 true, 홀수면 false
+  int num = 10;
+  boolean isEven;
+  isEven =  (num % 2) == 0 ? true : false;
+  System.out.println(isEven);
+ }
 }
 ```
 
@@ -282,47 +282,47 @@ public class OperationEx4 {
 // p.88 연습문제
 package chapter3;
 public class OperationEx1 {
-	public static void main(String[] args) {
-		int myAge = 23;
-		int teacherAge = 38;
-		
-		boolean value = (myAge > 25);
-		System.out.println(value);	// false
-		
-		System.out.println(myAge <= 25);	// true
-		System.out.println(myAge == teacherAge); // false
-		
-		char ch;
-		ch = (myAge > teacherAge) ? 'T' : 'F';
-		System.out.println(ch);	// F
-		
-		// q2, 3
-		int num;
-		num = -5 + 3 * 10 / 2;
-		System.out.println(num); 	// 10
-		System.out.println(num++); 	// 10
-		System.out.println(num); 	// 11
-		System.out.println(--num); 	// 10
-		
-		// q4
-		int num1 = 10;
-		int num2 = 20;
-		boolean result;
-		
-		result = ((num1 > 10) && (num2 > 10));
-		System.out.println(result); // false
-		result = ((num1 > 10) || (num2 > 10));
-		System.out.println(result); // true
-		
-		// q7
-		int result2 = (num >= 10) ? num2 + 10 : num2 -10;
-		System.out.println(result2); // 30
-		
-		// q6
-		num = 8;
-		System.out.println(num += 10);	// 18
-		System.out.println(num -= 10);	// 8
-		System.out.println(num >>= 10); // 0
-		}
+ public static void main(String[] args) {
+  int myAge = 23;
+  int teacherAge = 38;
+  
+  boolean value = (myAge > 25);
+  System.out.println(value); // false
+  
+  System.out.println(myAge <= 25); // true
+  System.out.println(myAge == teacherAge); // false
+  
+  char ch;
+  ch = (myAge > teacherAge) ? 'T' : 'F';
+  System.out.println(ch); // F
+  
+  // q2, 3
+  int num;
+  num = -5 + 3 * 10 / 2;
+  System.out.println(num);  // 10
+  System.out.println(num++);  // 10
+  System.out.println(num);  // 11
+  System.out.println(--num);  // 10
+  
+  // q4
+  int num1 = 10;
+  int num2 = 20;
+  boolean result;
+  
+  result = ((num1 > 10) && (num2 > 10));
+  System.out.println(result); // false
+  result = ((num1 > 10) || (num2 > 10));
+  System.out.println(result); // true
+  
+  // q7
+  int result2 = (num >= 10) ? num2 + 10 : num2 -10;
+  System.out.println(result2); // 30
+  
+  // q6
+  num = 8;
+  System.out.println(num += 10); // 18
+  System.out.println(num -= 10); // 8
+  System.out.println(num >>= 10); // 0
+  }
 }
 ```
