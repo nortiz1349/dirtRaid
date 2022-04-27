@@ -71,7 +71,7 @@ html {
 }
 ```
 
-## 네이게이션 width 조정
+## 네비게이션 width 조정
 
 `_sass\minimal-mistakes\_variables.scss`
 
@@ -116,16 +116,16 @@ a {
 
 ## 폰트 변경
 
-1. 구글 웹 폰트에서 임포트 하기 (https://fonts.google.com/)
+- 구글 웹 폰트에서 임포트 하기 (<https://fonts.google.com/>)
 
-`assets\css\main.scss`
+`assets\css\main.scss`  
 
 ```scss
 // 구글 웹 폰트 임포트 - 나눔고딕코딩
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
 ```
 
-2. 폰트 적용하기
+- 폰트 적용하기
 
 `_sass\minimal-mistakes\_variables.scss`
 
@@ -135,6 +135,6 @@ $serif: Georgia, Times, serif !default;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Nanum Gothic Coding", "Roboto",
   "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
-```
 
-`"Nanum Gothic Coding"` 을 추가하였다.
+// "Nanum Gothic Coding" 추가
+```
