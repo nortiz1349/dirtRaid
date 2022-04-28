@@ -1,5 +1,5 @@
 ---
-title: "JAVA - 시작, 변수와 자료형, 여러가지 연산자"
+title: "JAVA 시작, 변수와 자료형, 여러가지 연산자"
 excerpt: Variable, Data Type, Operator
 excerpt_separator: "<!--more-->"
 categories:

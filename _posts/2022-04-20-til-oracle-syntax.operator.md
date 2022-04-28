@@ -1,5 +1,5 @@
 ---
-title: "SELECT문의 기본 형식, WHERE, 연산자"
+title: "DB SELECT문의 기본 형식, WHERE, 연산자"
 excerpt: Syntax, Operator
 excerpt_separator: "<!--more-->"
 categories:

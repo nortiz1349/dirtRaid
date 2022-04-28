@@ -1,5 +1,5 @@
 ---
-title: "데이터 처리와 가공을 위한 오라클 함수"
+title: "DB 데이터 처리와 가공을 위한 오라클 함수"
 excerpt: 문자열, 숫자, 날짜, 형변환, NULL 
 excerpt_separator: "<!--more-->"
 categories:
