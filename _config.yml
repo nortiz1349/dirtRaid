@@ -60,15 +60,15 @@ author:
   avatar : "/assets/images/bio-photo2.JPG"
   bio    : " 자전거 타는 개발자 지망생입니다."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://nortiz1349.github.io/tilrepo/"
+    #- label: "Website"
+    #  icon: "fas fa-fw fa-link"
+    #  url: "https://nortiz1349.github.io/dirtraid/"
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+      url: "https://github.com/nortiz1349"
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
@@ -78,9 +78,9 @@ footer:
     # - label: "Twitter"
     #   icon: "fab fa-fw fa-twitter-square"
     #   url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
+    #- label: "GitHub"
+    #  icon: "fab fa-fw fa-github"
+    #  url: "https://github.com/"
     # - label: "Instagram"
     #   icon: "fab fa-fw fa-instagram"
     #   url: "https://instagram.com/"
@@ -93,7 +93,7 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
       comments: true
       share: true
       related: true
