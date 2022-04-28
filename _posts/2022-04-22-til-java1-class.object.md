@@ -1,6 +1,6 @@
 ---
-title: "JAVA 객체 지향 프로그래밍"
-excerpt: 클래스, 매서드, 인스턴스, 생성자, 참조 자료형, 정보 은닉
+title: "JAVA 클래스와 객체 (1)"
+excerpt: object, class, method, instance, constructor
 excerpt_separator: "<!--more-->"
 categories:
   - TIL

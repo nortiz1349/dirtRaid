@@ -1,6 +1,6 @@
 ---
 title: "JAVA 제어 흐름 이해하기"
-excerpt: 조건문, 반복문
+excerpt: if else, switch, while, for
 excerpt_separator: "<!--more-->"
 categories:
   - TIL
