@@ -55,9 +55,103 @@ class Person {
 }
 ```
 
-#### 객체 간 협력
+#### - 객체 간 협력
 
-예제 코딩 연습
+```java
+// 학생 클래스
+// 멤버변수 : 이름,학년,가진돈
+// 메서드 : 버스를 탄다. 지하철을탄다. 학생의 현재 정보를 보여준다.
+package cooperation;
+public class Student {
+ public String studentName;
+ public int grade;
+ public int money;
+ // 학생 이름과 가진 돈을 매개변수로 받는 생성자
+ public Student(String studentname, int money) {
+  this.studentName = studentname;
+  this.money = money;
+ }
+ // 학생이 버스를 타면 1,000원을 지불하는 기능을 구현한 메서드
+ public void takeBus(Bus bus) {
+  bus.take(1000);
+  this.money -= 1000;
+ }
+ // 지하철을 타면 1,500원을 지불하는 메서드
+ public void takeSubway(Subway subway) {
+  subway.take(1500);
+  this.money -= 1500;
+ }
+ 
+ public void showInfo() {
+  System.out.println(studentName + " 남은돈 " + money);
+ }
+}
+```
+
+```java
+// 버스 클래스
+package cooperation;
+public class Bus {
+ int busNumber;
+ int passengerCount;
+ int money;
+ // 버스 번호를 매개 변수로 받는 생성자
+ public Bus(int busNumber) {
+  this.busNumber = busNumber;
+ }
+ // 승객이 버스에 탄 경우를 구현한 메서드
+ public void take(int money) {
+  this.money += money;
+  passengerCount++;
+ }
+ public void showInfo() {
+  System.out.println("버스승객 " + passengerCount + " 수입 " + money);
+ }
+}
+```
+
+```java
+// 지하철 클래스
+package cooperation;
+public class Subway {
+ int lineNumber;
+ int passengerCount;
+ int money;
+ // 지하철 호선을 매개 변수로 받는 생성자
+ public Subway(int lineNumber) {
+  this.lineNumber = lineNumber;
+ }
+ // 승객이 버스에 탄 경우를 구현한 메서드
+ public void take(int money) {
+  this.money += money;
+  passengerCount++;
+ }
+ public void showInfo() {
+  System.out.println("지하철승객 " + passengerCount + " 수입 " + money);
+ }
+}
+```
+
+```java
+// 버스, 지하철 타기 클래스
+package cooperation;
+public class TakeTrans {
+ public static void main(String[] args) {
+  Student parkStudent = new Student("박종운", 20000); // 학생 두명 생성
+  Student kangStudent = new Student("강주하", 50000);
+  
+  Bus bus115 = new Bus(115);   // 버스 생성
+  parkStudent.takeBus(bus115); // 버스 탐
+  parkStudent.showInfo();      // 학생 정보 출력
+  bus115.showInfo();
+  
+  Subway subwayLine2 = new Subway(2); // 지하철 생성
+  kangStudent.takeSubway(subwayLine2);
+  kangStudent.showInfo();
+  subwayLine2.showInfo();
+ }
+}
+```
 
 ### 2. `static`  
 
@@ -135,7 +229,7 @@ public class Student2 {
  - int i = 10
 ```
 
-### 변수 유효 범위
+### - 변수 유효 범위
 
 |변수유형|선언위치|사용범위|메모리|생성과소멸|
 |:---:|:---:|:---:|:---:|:---:|
@@ -144,3 +238,13 @@ public class Student2 {
 |static 변수(클래스 변수)|static 예약어를 사용하여 클래스 내부에 선언|클래스 내부에서 사용하고 private이 아니면 클래스 이름으로 다른 클래스에서 사용 가능|데이터 영역|프로그램이 처음 시작할 때 상수와 함께 데이터 영역에 생성되고 프로그램이 끝나고 메모리를 해제할 때 소멸됨|
 
 ### `static` 응용 -  싱글톤 패턴
+
+상황에 따라 여러개의 인스턴스가 필요한 경우, 단 하나의 인스턴스가 필요한 경우도 있다. 단 하나의 인스턴스를 생성하는 디자인 패턴을 싱글톤 패턴이라고 한다. 디자인 패턴이란 프로그램 특성에 따른 설계 유형을 이론화한 내용이고 내용이 방대하므로 별도로 스터디가 필요하다.
+
+
+## 연습문제
+
+1. 클래스 내부에서 자신의 주소를 가리키는 예약어를 `this`라고 합니다.
+2. 클래스에 여러 생성자가 오버로드되어 있을 경우에 하나의 생성자에서 다른 생성자를 호출할 때 `this`를 사용합니다.
+3. 클래스 내부에 선언하는 `static`변수는 생성되는 인스턴스 마다 만들어지는 것이 아닌 여러 인스턴스가 공유하는 변수입니다. 따라서 클래스에 기반한 유일한 변수라는 의미로 `클래스 변수`라고도 합니다.
+4. 지역 변수는 함수나 메서드 내부에서만 사용할 수 있고 `스택` 메모리에 생성됩니다. 멤버 변수 중 `static` 예약어를 사용하는 static `데이터영역`메모리에 생성됩니다.
