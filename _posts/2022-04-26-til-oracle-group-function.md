@@ -1,6 +1,6 @@
 ---
 title: "다중행 함수와 데이터 그룹화"
-excerpt: 오라클 수업 - day 4
+excerpt: SUM, COUNT, MAX, MIN, ROLLUP, CUBE, GROUP
 excerpt_separator: "<!--more-->"
 categories:
   - TIL
@@ -8,6 +8,7 @@ tags:
   - oracle
   - database
   - sql
+  - Do it!
 
 toc: true
 toc_sticky: true

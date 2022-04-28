@@ -1,6 +1,6 @@
 ---
 title: "SELECT문의 기본 형식, WHERE, 연산자"
-excerpt: 오라클 수업 - day 2
+excerpt: Syntax, Operator
 excerpt_separator: "<!--more-->"
 categories:
   - TIL
@@ -8,6 +8,7 @@ tags:
   - oracle
   - database
   - sql
+  - Do it!
 
 toc: true
 toc_sticky: true

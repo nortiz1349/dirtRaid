@@ -1,6 +1,6 @@
 ---
 title: "데이터 처리와 가공을 위한 오라클 함수"
-excerpt: 오라클 수업 - day 3
+excerpt: 문자열, 숫자, 날짜, 형변환, NULL 
 excerpt_separator: "<!--more-->"
 categories:
   - TIL
@@ -8,6 +8,7 @@ tags:
   - oracle
   - database
   - sql
+  - Do it!
 
 toc: true
 toc_sticky: true
