@@ -14,7 +14,7 @@ toc_sticky: true
 date: 2022-04-28
 ---
 
-## 추상 클래스 `abstract`
+## `abstract`
 
 추상 클래스는 상속을 하기 위해 만드는 클래스이다. 하위 클래스가 어떤 클래스냐에 따라 구현 코드가 달라지는 경우, 실제 기능이 없는 추상메서드를 선언만 하고 하위 클래스에 구현을 위임한다.
 
@@ -25,7 +25,7 @@ date: 2022-04-28
 int add(int x, int y) {
   return x + y;
 }
-// 추상 메서드. abstract로 메서드를 선언만 함.
+// 추상 메서드. abstract로 메서드를 '선언만' 함.
 abstract int add(int x, int y);
 ```
 
