@@ -1,6 +1,6 @@
 ---
 title: "JAVA 배열과 ArrayList"
-excerpt: array, arrayList
+excerpt: array, ArrayList
 excerpt_separator: "<!--more-->"
 categories:
   - TIL
