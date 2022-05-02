@@ -160,7 +160,7 @@ for (String lang : strArray) {
 // 자료형[][]배열이름 = new 자료형[행개수][열개수]
 int[][]arr = new int[2][3];
 // 2행 3열 이차원 배열
-int[][]arr = {{1,2,3},{4,5,6}}
+int[][]arr = {% raw %}{{1,2,3},{4,5,6}}{% endraw %}
 ```
 
 ## ArrayList 클래스 사용하기
