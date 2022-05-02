@@ -12,7 +12,7 @@ tags:
 
 toc: true
 toc_sticky: true
-date: 2022-045-02
+date: 2022-05-02
 ---
 
 ## 조인 JOIN
