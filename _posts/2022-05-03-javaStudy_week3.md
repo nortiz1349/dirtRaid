@@ -1,5 +1,5 @@
 ---
-title: "연산자"
+title: "[JAVA STUDY] 연산자"
 excerpt: 다양한 연산자를 학습해보자
 excerpt_separator: "<!--more-->"
 categories:

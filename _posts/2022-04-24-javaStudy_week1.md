@@ -1,5 +1,5 @@
 ---
-title: "JVM은 무엇이며 자바 코드는 어떻게 실행하는 것인가."
+title: "[JAVA STUDY] JVM은 무엇이며 자바 코드는 어떻게 실행하는 것인가."
 excerpt: 자바 소스 파일(.java)을 JVM으로 실행하는 과정 이해하기.
 excerpt_separator: "<!--more-->"
 categories:
