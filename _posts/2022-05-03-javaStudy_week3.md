@@ -3,11 +3,12 @@ title: "연산자"
 excerpt: [Study]자바가 제공하는 다양한 연산자를 학습하세요.
 excerpt_separator: "<!--more-->"
 categories:
-  - Java Study
+  - JAVA
 tags:
   - JAVA
   - operator
   - instanceof
+  - Study
 
 
 toc: true

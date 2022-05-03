@@ -3,11 +3,12 @@ title: "자바 데이터 타입, 변수 그리고 배열"
 excerpt: [Study]자바의 프리미티브 타입, 변수 그리고 배열을 사용하는 방법
 excerpt_separator: "<!--more-->"
 categories:
-  - Java Study
+  - JAVA
 tags:
   - JAVA
   - type
   - array
+  - Study
 
 toc: true
 toc_sticky: true
