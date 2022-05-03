@@ -3,13 +3,14 @@ title: "DB 데이터 정의어"
 excerpt: DDL, CREATE, ALTER, RENAME, TRUNCATE, DROP
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - DATABASE
 tags:
   - oracle
   - database
   - sql
   - Do it!
   - ddl
+  - TIL
 
 toc: true
 toc_sticky: true

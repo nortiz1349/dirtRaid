@@ -3,12 +3,12 @@ title: "DB 데이터 조작어"
 excerpt: INSERT, UPDATE, DELETE
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - DATABASE
 tags:
   - oracle
-  - database
   - sql
   - Do it!
+  - TIL
 
 toc: true
 toc_sticky: true

@@ -3,12 +3,12 @@ title: "JAVA 클래스와 객체 (2)"
 excerpt: this, static
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - JAVA
 tags:
-  - java
-  - eclipse
+  - JAVA
   - Do it!
   - object
+  - class
 
 toc: true
 toc_sticky: true

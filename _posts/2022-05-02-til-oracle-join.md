@@ -3,12 +3,12 @@ title: "DB 조인"
 excerpt: JOIN
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - DATABASE
 tags:
   - oracle
-  - database
   - sql
   - Do it!
+  - TIL
 
 toc: true
 toc_sticky: true

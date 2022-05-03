@@ -3,11 +3,12 @@ title: "JAVA 상속과 다형성"
 excerpt: inheritance, polymorphism
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - JAVA
 tags:
-  - java
-  - eclipse
+  - JAVA
   - Do it!
+  - inheritance
+  - polymorphism
 
 toc: true
 toc_sticky: true

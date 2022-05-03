@@ -3,12 +3,12 @@ title: "DB 다중행 함수와 데이터 그룹화"
 excerpt: SUM, COUNT, MAX, MIN, ROLLUP, CUBE, GROUP
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - DATABASE
 tags:
   - oracle
-  - database
   - sql
   - Do it!
+  - TIL
 
 toc: true
 toc_sticky: true

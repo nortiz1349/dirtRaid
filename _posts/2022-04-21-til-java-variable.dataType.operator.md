@@ -3,14 +3,13 @@ title: "JAVA 시작, 변수와 자료형, 여러가지 연산자"
 excerpt: Variable, Data Type, Operator
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - JAVA
 tags:
-  - java
-  - eclipse
   - Do it!
   - variables
   - operator
   - type
+  - JAVA
 
 toc: true
 toc_sticky: true

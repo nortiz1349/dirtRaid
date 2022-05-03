@@ -3,12 +3,12 @@ title: "JAVA 배열과 ArrayList"
 excerpt: array, ArrayList
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - JAVA
 tags:
-  - java
-  - eclipse
+  - JAVA
   - Do it!
   - array
+  - ArrayList
 
 toc: true
 toc_sticky: true

@@ -3,12 +3,12 @@ title: "DB 서브쿼리"
 excerpt: subquery
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - DATABASE
 tags:
   - oracle
-  - database
   - sql
   - Do it!
+  - TIL
 
 toc: true
 toc_sticky: true

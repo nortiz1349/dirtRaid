@@ -3,13 +3,13 @@ title: "DB 트랜잭션 제어와 세션"
 excerpt: TRANSACTION, COMMIT, ROLLBACK, LOCK
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - DATABASE
 tags:
   - oracle
-  - database
   - sql
   - Do it!
   - transaction
+  - TIL
 
 toc: true
 toc_sticky: true

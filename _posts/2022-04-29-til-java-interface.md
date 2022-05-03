@@ -3,11 +3,11 @@ title: "JAVA 인터페이스"
 excerpt: interface
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - JAVA
 tags:
-  - java
-  - eclipse
+  - JAVA
   - Do it!
+  - interface
 
 toc: true
 toc_sticky: true

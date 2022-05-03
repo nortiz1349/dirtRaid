@@ -3,12 +3,12 @@ title: "DB 제약 조건"
 excerpt: Constraint, NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, CHECK, DEFAULT
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - DATABASE
 tags:
   - oracle
-  - database
   - sql
   - Do it!
+  - TIL
 
 toc: true
 toc_sticky: true

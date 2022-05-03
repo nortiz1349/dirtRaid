@@ -3,10 +3,11 @@ title: "JAVA 개발환경 준비"
 excerpt: JDK 설치, JAVA 환경변수 설정, Eclipse
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - JAVA
 tags:
-  - java
   - eclipse
+  - TIL
+  - JAVA
 
 toc: true
 toc_sticky: true

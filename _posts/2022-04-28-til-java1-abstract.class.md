@@ -3,11 +3,13 @@ title: "JAVA 추상 클래스"
 excerpt: abstract class, template method, final
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - JAVA
 tags:
-  - java
-  - eclipse
+  - JAVA
   - Do it!
+  - abstract
+  - final
+  - template method
 
 toc: true
 toc_sticky: true

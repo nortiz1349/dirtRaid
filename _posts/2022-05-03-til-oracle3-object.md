@@ -3,12 +3,12 @@ title: "DB 객체 종류"
 excerpt: Data Dictionary, Index, View, Sequence, Synonym
 excerpt_separator: "<!--more-->"
 categories:
-  - TIL
+  - DATABASE
 tags:
   - oracle
-  - database
   - sql
   - Do it!
+  - TIL
 
 toc: true
 toc_sticky: true
