@@ -8,6 +8,7 @@ tags:
   - java
   - eclipse
   - Do it!
+  - object
 
 toc: true
 toc_sticky: true

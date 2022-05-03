@@ -8,6 +8,9 @@ tags:
   - java
   - eclipse
   - Do it!
+  - variables
+  - operator
+  - type
 
 toc: true
 toc_sticky: true
