@@ -95,7 +95,7 @@ ALTER TABLE EMP_ALTER
 ```sql
 ALTER TABLE EMP_ALTER
   MODIFY EMPNO NUMBER(5);
-``` 
+```
 
 - DROP : 열 삭제
 
