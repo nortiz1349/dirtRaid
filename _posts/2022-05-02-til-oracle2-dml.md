@@ -145,3 +145,16 @@ UPDATE DEPT_TEMP2
                         WHERE DEPTNO = 40)
   WHERE DEPTNO = 40;
 ```
+
+## 테이블에 있는 데이터 삭제하기
+
+```sql
+DELETE FROM [테이블이름]
+WHERE 선별식;
+
+DELETE FROM EMP_TEMP2
+  WHERE JOB = 'MANAGER';
+-- JOB열 데이터가 MANAGER인 데이터만 삭제
+```
+
+- `DELETE`, `UPDATE`문은 사용할 때 특별히 주의해야 한다. `WHERE` 조건식을 사용하여 삭제할 대상을 정확히 선택하고 있는지 검증하는 과정이 필요하다. `SELECT`문을 사용하여 반드시 검증한 후 사용한다.
