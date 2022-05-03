@@ -1,6 +1,6 @@
 ---
 title: "연산자"
-excerpt: [Study]자바가 제공하는 다양한 연산자를 학습하세요.
+excerpt: 다양한 연산자를 학습해보자
 excerpt_separator: "<!--more-->"
 categories:
   - JAVA
