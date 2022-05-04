@@ -32,4 +32,33 @@ date: 2022-05-03
 
 ---
 
-## 프리미티브 타입의 종류
+## Java Data Type
+
+자바에서 변수는 특정 데이터 타입으로 지정되어야만 한다.
+
+테이터 타입은 크게 두가지로 나눌 수 있다.
+
+- Primitive data types  
+  byte, short, int, long, float, double, boolean, char
+
+- Non-primitive data types  
+  String, Arrays and Classes
+
+## Primitive Data Type
+
+
+
+|Data|Type Size|min ~ max|Default|
+|---|---|---|---|
+|byte|1 byte|-128 ~ 127|0|
+|short|2 bytes|-32,768 to 32,767|0|byte와 동일한 가이드가 적용된다.|
+|int|4 bytes|-2<sup>31</sup> ~ (2<sup>31</sup> -1)|0|
+|long|8 bytes|-2<sup>63</sup> ~ (2<sup>63</sup> -1|0L|
+|float|4 bytes|3.4 * 10<sup>-38</sup> ~ 3.4 X 10<sup>38</sup> 의 근사값|0.0F|
+|double|8 bytes|(1.7 X 10^-308) ~ (1.7 X 10^308) 의 근사값|0.0|
+|boolean|1 bit|Stores true or false values|false|
+|char|2 bytes|Stores a single character/letter or ASCII values|'\u0000'|
+
+1. byte
+
+메모리 절약이 중요한 대형 배열에서 메모리를 절약 할 때 유용하게 쓰일 수 있다. 그리고 변수의 범위가 제한되어 있다는 사실을 명시적으로 표현하기 위해 쓸 수도 있다.
