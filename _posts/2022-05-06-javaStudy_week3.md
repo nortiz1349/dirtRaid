@@ -22,16 +22,16 @@ date: 2022-05-06
 
 ## 학습할 것
 
-:check: 산술 연산자
-:check: 비트 연산자
-:check: 관계 연산자
-:check: 논리 연산자
-:check: instanceof
-:check: assignment(=) operator
-:check: 화살표(->) 연산자
-:check: 3항 연산자
-:check: 연산자 우선 순위
-:check: (optional) Java 13. switch 연산자
+:checkered_flag: 산술 연산자  
+:heavy_check_mark: 비트 연산자  
+:heavy_check_mark: 관계 연산자  
+:heavy_check_mark: 논리 연산자  
+:heavy_check_mark: instanceof  
+:heavy_check_mark: assignment(=) operator  
+:heavy_check_mark: 화살표(->) 연산자  
+:heavy_check_mark: 3항 연산자  
+:heavy_check_mark: 연산자 우선 순위  
+:heavy_check_mark: (optional) Java 13. switch 연산자
 
 ---
 
