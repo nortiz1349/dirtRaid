@@ -13,7 +13,7 @@ tags:
 
 toc: true
 toc_sticky: true
-date: 2022-05-03
+date: 2022-05-06
 ---
 
 ## 목표
@@ -22,18 +22,20 @@ date: 2022-05-03
 
 ## 학습할 것
 
-- 산술 연산자
-- 비트 연산자
-- 관계 연산자
-- 논리 연산자
-- instanceof
-- assignment(=) operator
-- 화살표(->) 연산자
-- 3항 연산자
-- 연산자 우선 순위
-- (optional) Java 13. switch 연산자
+:check: 산술 연산자
+:check: 비트 연산자
+:check: 관계 연산자
+:check: 논리 연산자
+:check: instanceof
+:check: assignment(=) operator
+:check: 화살표(->) 연산자
+:check: 3항 연산자
+:check: 연산자 우선 순위
+:check: (optional) Java 13. switch 연산자
 
 ---
+
+## 용어 정리
 
 - 연산 (operations) : 프로그램에서 데이터를 처리하여 결과를 산출하는 것  
 - 연산자 (operator) : 연산에 사용되는 표시나 기호  
