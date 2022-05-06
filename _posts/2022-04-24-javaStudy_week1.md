@@ -20,13 +20,13 @@ date: 2022-04-24
 
 ## 학습할 것
 
-- JVM이란 무엇인가
-- 컴파일 하는 방법
-- 실행하는 방법
-- 바이트코드란 무엇인가
-- JIT 컴파일러란 무엇이며 어떻게 동작하는지
-- JVM 구성 요소
-- JDK와 JRE의 차이
+:checkered_flag: JVM이란 무엇인가  
+:checkered_flag: 컴파일 하는 방법  
+:checkered_flag: 실행하는 방법  
+:checkered_flag: 바이트코드란 무엇인가  
+:checkered_flag: JIT 컴파일러란 무엇이며 어떻게 동작하는지  
+:checkered_flag: JVM 구성 요소  
+:checkered_flag: JDK와 JRE의 차이
 
 ---
 
