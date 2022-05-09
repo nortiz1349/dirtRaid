@@ -22,7 +22,7 @@ github_username: nortiz1349
 minimal_mistakes_skin: dark
 search: true
 
-repository: "nortiz1349/comments"
+repository: "nortiz1349/dirtraid"
 comments:
   provider: "utterances"
   utterances:
