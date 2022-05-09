@@ -26,7 +26,7 @@ date: 2022-04-21
 1. `고급 시스템 설정` > `환경변수` > `시스템변수` > `새로만들기`
 2. 변수이름 : `JAVA_HOME`, 변수값 : `C:\Program Files\Java\jdk-11.0.14` (자바가 설치된 경로)
 3. 시스템 변수 `Path` 편집 > `%JAVA_HOME%\bin` 추가
-4. 변수이름: `CLASSPATH`, 변수값: `%JAVA_HOME%\lib;.;`
+4. 변수이름: `CLASSPATH`, 변수값: `%JAVA_HOME%\lib`
 5. `cmd` > `java -version` 으로 설치확인
 
 ## 3. Eclipse 설치 후 실행
