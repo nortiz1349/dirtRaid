@@ -22,6 +22,13 @@ github_username: nortiz1349
 minimal_mistakes_skin: dark
 search: true
 
+repository: "nortiz1349/comments"
+comments:
+  provider: "utterances"
+  utterances:
+    theme: "photon-dark"
+    issue-term: "pathname"
+
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
