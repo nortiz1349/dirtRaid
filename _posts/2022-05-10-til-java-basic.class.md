@@ -12,7 +12,7 @@ tags:
 
 toc: true
 toc_sticky: true
-date: 2022-05-06
+date: 2022-05-10
 ---
 
 ## :hash: Object 클래스
@@ -201,6 +201,10 @@ public class ObjectCloneTest {
  }
 }
 ```
+
+`clone()` 메서드를 사용하려면 객체를 복제해도 된다는 의미로 `Cloneable` 인터페이스를 구현해야 한다. 구현하지 않으면 `CloneNotSupportedException`이 발생한다.
+
+:bell: `Cloneable` 인터페이스를 선언해도 별도로 구현해야하는 메서드는 없다. 이렇게 구현할 메서드가 없는 인터페이스를 마커 인터페이스(marker interface)라고 한다.
 
 ## :hash: String 클래스
 
